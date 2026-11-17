@@ -1,0 +1,8 @@
+# Original, full-size photos stay on this computer only — the site uses images/web/
+images/*
+media/
+!images/web/
+
+# System / editor files
+.DS_Store
+.claude/

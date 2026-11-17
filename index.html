@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sneha Thombare · Construction Project Manager</title>
+  <meta name="description" content="Portfolio of Sneha Thombare, construction project manager working across residential and commercial developments." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div class="page">
+    <!-- ───────────── HERO SHEET ───────────── -->
+    <header class="sheet hero" id="top">
+      <div class="hero__text">
+        <nav class="nav" aria-label="Primary">
+          <a class="brand" href="#top" aria-label="Sneha Thombare, home">
+            <svg class="brand__mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V5M8 21V3M12 21V7M16 21V9M20 21V11"/></svg>
+            <span class="brand__name">Sneha Thombare</span>
+          </a>
+          <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+          <ul class="nav__links" id="nav-links">
+            <li><a href="#top" aria-current="page">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="hero__body">
+          <p class="eyebrow"><span class="eyebrow__num">/ 01</span><span data-site="title">Construction Project Manager</span></p>
+          <h1 class="hero__title">Sneha <br />Thombare</h1>
+          <p class="hero__tagline">From feasibility to handover.</p>
+          <p class="hero__lede" data-site="intro"></p>
+        </div>
+
+        <div class="hero__foot">
+          <a class="scroll-cue" href="#projects"><span>Scroll down</span><svg viewBox="0 0 12 40" aria-hidden="true"><path d="M6 0v38M1 33l5 5 5-5"/></svg></a>
+          <ul class="link-rows">
+            <li><a href="#projects">Explore my projects <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a></li>
+            <li><a href="#about">Read about my work <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="hero__visual">
+        <div class="thumbs" role="group" aria-label="Featured projects" id="hero-thumbs"></div>
+        <figure class="stage">
+          <div class="stage__media" id="hero-stage"></div>
+          <a class="pill" href="#contact">Let’s talk <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a>
+          <div class="stage__bar">
+            <figcaption class="stage__caption" id="hero-caption"></figcaption>
+            <button class="stage__toggle" id="hero-toggle" type="button" aria-label="Pause slideshow" aria-pressed="false">
+              <svg class="i-pause" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3v10M11 3v10"/></svg>
+              <svg class="i-play" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3l8 5-8 5z"/></svg>
+            </button>
+          </div>
+          <div class="stage__progress" aria-hidden="true"><span id="hero-progress"></span></div>
+        </figure>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ───────────── BENTO STRIP ───────────── -->
+      <section class="bento" aria-label="Highlights">
+        <article class="sheet bento__statement">
+          <div class="bento__statement-art" id="statement-art" aria-hidden="true"></div>
+          <div class="bento__statement-text">
+            <h2>Every project, <br />coordinated with care</h2>
+            <dl class="stats" id="stats"></dl>
+          </div>
+        </article>
+        <a class="sheet bento__feature" id="bento-feature" href="#projects"></a>
+      </section>
+
+      <!-- ───────────── PROJECTS ───────────── -->
+      <section class="section" id="projects" aria-labelledby="projects-title">
+        <div class="section__head">
+          <p class="eyebrow"><span class="eyebrow__num">/ 02</span>Projects</p>
+          <h2 id="projects-title" class="section__title">Selected work</h2>
+          <div class="filters" role="group" aria-label="Filter projects by category" id="filters"></div>
+        </div>
+        <ul class="grid" id="project-grid"></ul>
+        <p class="grid__empty" id="grid-status" role="status" aria-live="polite"></p>
+      </section>
+
+      <!-- ───────────── ABOUT ───────────── -->
+      <section class="section sheet about" id="about" aria-labelledby="about-title">
+        <div class="about__portrait">
+          <!-- Replace with: <img src="images/portrait.jpg" alt="Portrait of Sneha Thombare" width="600" height="750"> -->
+          <div class="portrait-ph" aria-hidden="true"><span>ST</span></div>
+        </div>
+        <div class="about__text">
+          <p class="eyebrow"><span class="eyebrow__num">/ 03</span>About</p>
+          <h2 id="about-title" class="section__title">Bringing design, approvals and delivery together.</h2>
+          <div id="about-bio" class="about__bio"></div>
+          <h3 class="about__sub">What I do</h3>
+          <ul class="skills" id="about-skills"></ul>
+        </div>
+      </section>
+
+      <!-- ───────────── CONTACT ───────────── -->
+      <section class="section contact" id="contact" aria-labelledby="contact-title">
+        <p class="eyebrow"><span class="eyebrow__num">/ 04</span>Contact</p>
+        <h2 id="contact-title" class="contact__title">Let’s build something <br />together.</h2>
+        <ul class="link-rows link-rows--lg">
+          <li><a id="contact-email" href="#">Email <span class="link-rows__meta" data-site="email"></span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a></li>
+          <li><a id="contact-linkedin" href="#" target="_blank" rel="noopener">LinkedIn <span class="link-rows__meta">/in/sneha-thombare</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12L12 4M5 4h7v7"/></svg></a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>© <span id="year"></span> Sneha Thombare</span>
+      <a href="#top">Back to top ↑</a>
+    </footer>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
