@@ -184,7 +184,7 @@ window.PROJECTS = [
       { src: "images/web/mid-rise/view-5.jpg", caption: "Exterior view of the second building" },
       { src: "images/web/mid-rise/unit-2bhk.jpg", caption: "2 BHK unit, 3D plan" },
       { src: "images/web/mid-rise/unit-3bhk.jpg", caption: "3 BHK unit, 3D plan" },
-      { src: "images/web/mid-rise/area-statement.jpg", caption: "Area statement and FSI calculation" },
+      { src: "images/web/mid-rise/area-statement.jpg?v=2", caption: "Area statement and FSI calculation" },
     ],
     art: { type: "wings", tone: "clay" },
     summary:
