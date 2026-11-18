@@ -294,6 +294,13 @@
   }
 
   /* ─────────── CASE STUDY ─────────── */
+  // "Label: text" → <strong>Label</strong> text (only for short labels)
+  function labelled(s) {
+    const i = s.indexOf(": ");
+    if (i > 0 && i < 40) return `<strong>${esc(s.slice(0, i))}</strong> ${esc(s.slice(i + 2))}`;
+    return esc(s);
+  }
+
   function initCase() {
     const main = $("#main.case");
     const slug = new URLSearchParams(location.search).get("p");
@@ -326,16 +333,66 @@
         </div>
         <figure class="case__media">${media(p, { eager: true })}</figure>
       </section>
+      ${
+        p.overview
+          ? `<section class="sheet case__section case__section--split reveal">
+              <h2 class="case__h"><span class="eyebrow__num">/ Overview</span>Overview</h2>
+              <div class="case__prose">${p.overview.map((t) => `<p>${esc(t)}</p>`).join("")}</div>
+            </section>`
+          : ""
+      }
       <section class="case__body">
         <div class="sheet case__block case__block--wide reveal">
           <h2 class="case__h"><span class="eyebrow__num">/ Role</span>What I did</h2>
-          <ol class="highlights">${(p.highlights || []).map((h) => `<li>${esc(h)}</li>`).join("")}</ol>
+          <ol class="highlights">${(p.highlights || []).map((h) => `<li><span>${labelled(h)}</span></li>`).join("")}</ol>
         </div>
         <div class="sheet case__block reveal">
-          <h2 class="case__h"><span class="eyebrow__num">/ Scope</span>Scope of work</h2>
+          <h2 class="case__h"><span class="eyebrow__num">/ Skills</span>${p.overview ? "Skills shown" : "Scope of work"}</h2>
           <ul class="skills">${(p.scope || []).map((s) => `<li>${esc(s)}</li>`).join("")}</ul>
         </div>
       </section>
+      ${
+        p.challenge
+          ? `<section class="sheet case__section case__section--split reveal">
+              <h2 class="case__h"><span class="eyebrow__num">/ Challenge</span>The challenge</h2>
+              <p class="case__lead">${esc(p.challenge)}</p>
+            </section>`
+          : ""
+      }
+      ${
+        p.approach
+          ? `<section class="sheet case__section reveal">
+              <h2 class="case__h"><span class="eyebrow__num">/ Approach</span>Approach</h2>
+              <ol class="steps">${p.approach
+                .map(([t, d], n) => `<li><span class="steps__num">${pad(n + 1)}</span><h3>${esc(t)}</h3><p>${esc(d)}</p></li>`)
+                .join("")}</ol>
+            </section>`
+          : ""
+      }
+      ${
+        p.designHighlights
+          ? `<section class="case__section case__section--bare reveal">
+              <h2 class="case__h"><span class="eyebrow__num">/ Design</span>Design highlights</h2>
+              <ul class="features">${p.designHighlights
+                .map(([t, d]) => `<li class="sheet"><h3>${esc(t)}</h3><p>${esc(d)}</p></li>`)
+                .join("")}</ul>
+            </section>`
+          : ""
+      }
+      ${
+        p.outcome || p.deliverables
+          ? `<section class="case__body case__body--even">
+              ${p.outcome ? `<div class="sheet case__block case__block--accent reveal">
+                <h2 class="case__h"><span class="eyebrow__num">/ Outcome</span>Outcome</h2>
+                <ul class="ticks">${p.outcome.map((o) => `<li>${esc(o)}</li>`).join("")}</ul>
+              </div>` : ""}
+              ${p.deliverables ? `<div class="sheet case__block reveal">
+                <h2 class="case__h"><span class="eyebrow__num">/ Deliverables</span>Deliverables</h2>
+                <ul class="dashes">${p.deliverables.map((o) => `<li>${esc(o)}</li>`).join("")}</ul>
+              </div>` : ""}
+            </section>`
+          : ""
+      }
       ${
         p.gallery && p.gallery.length
           ? `<section class="gallery" aria-label="Project gallery">${p.gallery
