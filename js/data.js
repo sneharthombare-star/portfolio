@@ -281,14 +281,13 @@ window.PROJECTS = [
     gallery: [],
     art: { type: "flow", tone: "sand" },
     summary:
-      "A process-improvement project for an international NGO's People & Culture team, completed with an 8-member team as my Northeastern University capstone. The redesigned, digital-first process cut the projected hiring cycle by about 25%.",
+      "A process-improvement project for an international NGO's People & Culture team, completed as my Northeastern University capstone. The redesigned, digital-first process cut the projected hiring cycle by about 25%.",
     facts: [
       ["Client", "International NGO · People & Culture"],
-      ["Team", "8 members, rotating roles"],
       ["Outcome", "Hiring cycle 7–10 → 5.5–7.5 weeks"],
     ],
     highlights: [
-      "Served as Project Manager for the planning phase, leading the team through the Project Charter, Scope Statement, Requirements Document and WBS, and coordinating the sponsor working session used for process mapping.",
+      "Served as Project Manager for the planning phase, delivering the Project Charter, Scope Statement, Requirements Document and WBS, and coordinating the sponsor working session used for process mapping.",
       "Mapped the current workflow with block and swim-lane diagrams, identifying manual handoffs that added 2–7 days at several steps; built an 11-week MS Project schedule, RACI matrix, risk register and quality plan with KPIs.",
       "Designed a digital-first recruitment model with piloted micro-automations (Power Automate, Excel–Outlook, MS Forms), cutting the projected hiring cycle from 7–10 weeks to 5.5–7.5 weeks (about 25%).",
       "Costed the model within the client's budget at CAD 1,100–13,000 over 5 months, from free-tool to paid-tool options, including training and 10% contingency.",
